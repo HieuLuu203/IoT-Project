@@ -35,7 +35,9 @@ h1 {
     border-radius: 5px;
     font-size: 1em;
 }
-
+.search-container input[type="date"] {
+    font-family: inherit;
+}
 .search-container input[type="text"] {
     width: 200px;
 }
@@ -49,6 +51,10 @@ h1 {
     color: white;
     border: none;
     cursor: pointer;
+    width: 150px;
+    height: 40px;
+    align-self: flex-end;
+    margin-bottom: 0;
 }
 
 .search-container button:hover {
