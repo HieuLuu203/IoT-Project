@@ -5,7 +5,9 @@ body {
     margin: 0;
     padding: 0;
 }
-
+.container {
+    margin-top: 5px;
+}
 h1 {
     text-align: center;
     color: #333;
@@ -13,7 +15,7 @@ h1 {
 }
 
 .box {
-    width: 30%;
+    width: 20%;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
@@ -62,7 +64,6 @@ h1 {
 .container {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
 }
 
 .chart-and-action {
@@ -121,20 +122,25 @@ button {
 }
 
 .chart-container {
-    width: 50%;
+    margin-left: 10px;
+    width: 60%;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
 }
 
-.action-container {
-    width: 45%;
+.action-containerr {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 35%;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
+    margin-bottom: 10px;
 }
 
 .device-icon {

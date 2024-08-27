@@ -39,7 +39,6 @@ const Home = () => {
     return (
         <div>
             <ToastContainer />
-            <h1>DashBoard</h1>
             <div className="container">
                 <div className="box">
                     <h2>Nhiệt độ</h2>
@@ -76,7 +75,7 @@ const Home = () => {
                 <div className="chart-container">
                     <Chart data={data} />
                 </div>
-                <div className="action-container">
+                <div className="action-containerr">
                     <table>
                         <thead>
                             <tr>
