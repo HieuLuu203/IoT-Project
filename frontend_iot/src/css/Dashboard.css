@@ -1,0 +1,381 @@
+#main {
+    display: flex;
+}
+.dashboard {
+    padding: 20px 50px;
+    /* background-color: #f4f6f9; */
+    flex-grow: 1;
+    height: 100vh;
+}
+.dashboard h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}   
+.list-box-container {
+    border: 2px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+        /* Màu xanh lá cây nhạt */
+    background-color: #96efb7;
+  }
+  
+  .list-box-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    margin-top: 0px;
+  }
+.list-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 100px;
+
+}
+
+
+.box {
+    width: 25%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    text-align: center;
+}
+
+.box h2 {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.box p {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.box .bar-container {
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.box .bar {
+    height: 100%;
+    border-radius: 5px;
+}
+.dust {
+    /* Màu nâu */
+    background-color: #8b4513 !important;
+}
+.temperature {
+    background-color: #f44336 !important;
+}
+
+.humidity {
+    background-color: #2196f3 !important;
+}
+
+.light {
+    background-color: #ffeb3b !important;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+.dashboard-container {
+    display: flex;
+}
+.chart-section {
+    width: 70%;
+}
+.control-panel {
+    flex: 1;
+    border-radius: 10px;
+}
+
+.control-panel-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.control-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.control-table th,
+.control-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.control-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.device-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.device-icon {
+    font-size: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.device-icon.rotating {
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.device-icon.ac-icon.on {
+    background: linear-gradient(135deg, #00bfff, #1e90ff); /* Gradient xanh dương liên tục */
+    border-radius: 50%;
+    padding: 10px;
+    animation: gradient 3s linear infinite;
+}
+
+.device-icon.ac-icon.off {
+    background: #fff; /* Nền trắng khi tắt */
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.device-icon.ac-icon.on .icon {
+    color: #fff; /* Màu trắng cho icon khi bật */
+    text-shadow: 0 0 8px rgba(52, 152, 219, 0.5); /* Hiệu ứng ánh sáng xung quanh */
+}
+
+.device-icon.ac-icon.off .icon {
+    color: #000; /* Màu đen cho icon khi tắt */
+}
+/* Fridge */
+.device-icon.fridge-icon.off {
+    background: #fff; /* Nền trắng khi tắt */
+    border-radius: 50%;
+    padding: 10px;
+}
+.device-icon.fridge-icon.on {
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+}
+/* Hiệu ứng khi thiết bị bật */
+.device-icon.fridge-icon.on .icon {
+    color: #ffa500; /* Màu cam khi bật */
+}
+
+/* Hiệu ứng khi thiết bị tắt */
+.device-icon.fridge-icon.off .icon {
+    color: #aaa; /* Màu xám khi tắt */
+}
+.device-info span {
+    display: block;
+    margin-top: 5px;
+}
+@keyframes gradient {
+    0% {
+        background: linear-gradient(135deg, #00bfff, #1e90ff);
+    }
+    50% {
+        background: linear-gradient(135deg, #1e90ff, #00bfff);
+    }
+    100% {
+        background: linear-gradient(135deg, #00bfff, #1e90ff);
+    }
+}
+
+.icon {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Toggle Button Style */
+.control-button {
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 15px;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.control-button::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.control-button.on {
+    background-color: #4caf50; /* Green background when on */
+}
+
+.control-button.on::before {
+    transform: translateX(30px); /* Slide the toggle circle to the right */
+}
+
+.control-button.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    border: 3px solid #fff;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.device-info span {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.warning-light {
+    margin-top: 5px;
+}
+.warning-light h3 {
+    margin: 0;
+    margin-bottom: 5px;
+}
+/* Hiệu ứng khi thiết bị bật */
+.device-icon.w-icon.on .icon {
+    color: #e71212; /* Màu cam khi bật */
+}
+
+/* Hiệu ứng khi thiết bị tắt */
+.device-icon.w-icon.off .icon {
+    color: #aaa; /* Màu xám khi tắt */
+}
+
+/* Base styles for w-icon */
+.device-icon.w-icon {
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Red blinking effect when on */
+.device-icon.w-icon.on {
+    background-color: #ff4d4d; /* Red background for "on" state */
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6), 0 0 30px rgba(255, 0, 0, 0.4);
+    animation: red-blink 1s infinite alternate;
+}
+
+/* Red blinking animation */
+@keyframes red-blink {
+    0% {
+        background-color: #ff4d4d; /* Solid red */
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.7), 0 0 35px rgba(255, 0, 0, 0.5);
+    }
+    100% {
+        background-color: #ff8080; /* Lighter red */
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.4), 0 0 20px rgba(255, 0, 0, 0.3);
+    }
+}
+
+/* Icon styling */
+.device-icon.w-icon .icon {
+    color: #fff;
+    font-size: 28px;
+}
+
+/* Count warning container styling */
+.count-warning {
+    background-color: #fef9f3;
+    border: 2px solid #ff6b6b;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Title styling */
+.count-warning-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff4d4d;
+    margin-bottom: 15px;
+}
+
+/* Warning count box styling */
+.count-warning-box {
+    background-color: #ffeded;
+    border: 1px solid #ff6b6b;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 28px;
+    color: #ff4d4d;
+    font-weight: bold;
+    box-shadow: inset 0 4px 8px rgba(255, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+/* Hover effect for the box */
+.count-warning-box:hover {
+    transform: scale(1.05);
+}
+
+/* Smooth pulsing effect to draw attention */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: inset 0 4px 10px rgba(255, 0, 0, 0.15);
+    }
+    50% {
+        box-shadow: inset 0 6px 15px rgba(255, 0, 0, 0.3);
+    }
+}
+
+.count-warning-box {
+    animation: pulse 2s infinite;
+}

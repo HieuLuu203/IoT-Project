@@ -1,3 +1,2 @@
-iot-fe-react/node_modules/
-iot-fe-react/.env
-iot-backend/env/
+/BackEnd_IoT/node_modules
+/frontend_iot/node_modules
